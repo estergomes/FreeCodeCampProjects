@@ -1,0 +1,135 @@
+* {margin: 0; padding: 0;}
+
+html { height: 100%;}
+body { 
+  font-family:'Open Sans', 'Helvetica Neue', sans-serif;
+  background: lightgray;
+  font-weight: 600;
+}
+
+.on{
+  background: #c5e9bd;
+  pointer-events: all;
+}
+
+.disabledbutton {
+  pointer-events: none;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.calc_container {
+  background: #4ffcb2;
+  width: 268px;
+  height: auto;
+  margin: 150px auto;
+ border-radius: 5px;
+ box-shadow: 0px 3px 0px  #3c8463;
+}
+
+.calc_input {
+  background: #8faa88;
+  width: 225px;
+  height: 76px;
+  box-sizing: content-box;
+  margin:  20px auto;
+  top: 20px;
+  position: relative;
+  display: block;
+}
+.input {
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 225px;
+  height: 76px;
+  margin: 0 auto;
+  position: relative;
+  text-align: right;
+  font-size: 36px;
+  /* padding: 0 5px; */
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+.input p{
+  /* margin-top: 15px; */
+  width: 100%;
+  min-height: 100%;
+  padding: 15px 0px;
+  position: relative;
+}
+
+.calc_keys {
+  width: 230px;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns:  repeat(4, 1fr);
+  grid-gap: .5rem;
+}
+.calc_keys div {
+  background: khaki;
+  text-align: center;
+  margin: 0 auto;
+  
+  line-height: 29px;
+}
+
+
+.btn {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  min-width: 90%;
+  height: 30px;
+  text-align: center;
+  box-shadow: 0px 3px 0px black;
+  top: 5px;
+}
+.btn:last-child {
+  grid-column: 3 / span 2 ;
+  width: 95%;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:active {
+  background-color: rgb(167, 159, 87);
+  box-shadow: 0px 1px 0px black;
+  transform: translateY(4px);
+}
+
+/* buttons */
+div.btn-equal {
+  background: #fa3257;
+}
+div.btn-divi {
+  background: #4ccd34;
+}
+div.btn-mult {
+  background: #4ac4c5;
+}
+div.btn-sum {
+  background: #f2e932;
+}
+div.btn-min {
+  background: #21308b;
+}
+
+footer {
+  /* margin-top: 20px;   */
+}
+
+footer p{
+  text-transform: uppercase;
+  text-align: center;
+  color: #36e79a;
+  padding: 20px 0;
+  text-shadow: 2px 2px 0px #86eaba;
+  text-shadow: -1px -1px 0px #3c8463;
+}
