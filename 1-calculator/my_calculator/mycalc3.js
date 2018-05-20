@@ -1,39 +1,40 @@
-
 var inputDisplay = document.querySelector('.calc_input .input p');
 var btnON = document.getElementById('on');
 
+function disable(){
+	btnON.disabled = true;
+	return btnON;
+}
 
 function pushBtn(obj) {
 	var btnActivated = obj.innerHTML;
 
-	if(btnActivated === "="){
+	if (btnActivated === "=") {
 		inputDisplay.innerHTML = eval(inputDisplay.innerHTML);
-	} else if(btnActivated === "AC") {
+	} else if (btnActivated === "AC") {
 		inputDisplay.innerHTML = '';
 	} else {
-		if(inputDisplay.innerHTMLi == '0') {
+		if (inputDisplay.innerHTMLi == '0') {
 			inputDisplay.innerHTML = btnActivated;
 		} else {
-			inputDisplay.innerHTML +=btnActivated;
+			inputDisplay.innerHTML += btnActivated;
 		}
 	}
 
-	
 	// turn on / turn off
+	if (btnActivated === 'ON') {
+		inputDisplay.classList.toggle('on');
+		btnON.textContent = 'OFF';
+		inputDisplay.innerHTML = '';
+	
+	} else { 
+		btnON.textContent = 'ON';
+		inputDisplay.innerHTML = '';
+	}
 
-  	if(btnActivated === 'ON'){
-			inputDisplay.classList.toggle('on');
-			btnON.textContent = 'OFF';
-			inputDisplay.innerHTML = '';
-    }else {
-			btnON.textContent = 'ON';
-			inputDisplay.innerHTML = '';
-		}
-
-    if(btnON.textContent === 'CE' || btnON.textContent === 'AC'){
-      console.log('Calculadora limpa');
-      return inputDisplay.innerHTML = '';
-    } 
+	if (btnON.textContent === 'CE' || btnON.textContent === 'AC') {
+		console.log('Calculadora limpa');
+		return inputDisplay.innerHTML = '';
+	}
 
 }
-

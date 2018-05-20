@@ -32,7 +32,7 @@ body {
  box-shadow: 0px 3px 0px  #3c8463;
 }
 
-.calc_input {
+.calc_display {
   background: #8faa88;
   width: 225px;
   height: 76px;
@@ -42,25 +42,23 @@ body {
   position: relative;
   display: block;
 }
-.input {
-  border: 2px solid #000;
+.display {
+  border: 2px solid rgb(0,0,0);
   border-radius: 5px;
   width: 225px;
   height: 76px;
   margin: 0 auto;
   position: relative;
   text-align: right;
-  font-size: 36px;
+  font-size: 32px;
   /* padding: 0 5px; */
   box-sizing: border-box;
   overflow: hidden;
 
 }
-.input p{
-  /* margin-top: 15px; */
-  width: 100%;
-  min-height: 100%;
-  padding: 15px 0px;
+.display p{
+  height: 100%;
+  padding: 15px 2px;
   position: relative;
 }
 
